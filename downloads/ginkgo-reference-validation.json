@@ -1,0 +1,43 @@
+{
+  "status": "single-layer visual proof; not an approved manufacturing layer set",
+  "source": "ginkgo-starter.png",
+  "source_sha256": "497dc2c58f2bc299872d2eb56cdb48176cf5a554d5b02bb19f1dfa2a14ba25c9",
+  "source_dimensions": [
+    1112,
+    1415
+  ],
+  "source_crop": [
+    35,
+    146,
+    1077,
+    1325
+  ],
+  "symmetry_method": "Left half mirrored exactly; no independent drawing",
+  "preparation": "Source topology thinned; radius-24 disk reinforcement plus original broad strokes",
+  "source_scaled_black_pixels": 8515002,
+  "master_preparation_added_pixels": 587394,
+  "master_preparation_removed_pixels": 177842,
+  "dimensions": [
+    6400,
+    7200
+  ],
+  "dpi": [
+    599.9988,
+    599.9988
+  ],
+  "scaling_boundary_external_height_pixels": 6900,
+  "scaling_boundary_external_height_inches": 11.5,
+  "artwork_connected_components": 1,
+  "connected_backbones_after_19px_erosion": 1,
+  "symmetry_mismatched_pixels": 0,
+  "minimum_width_uncovered_pixels": 0,
+  "minimum_width_method": "Exact radius-24 disk opening plus connected 19px-eroded backbone",
+  "binary_colors": true,
+  "registration_separate": true,
+  "registration_exact": true,
+  "stack_containment": "not run; no upper layers exist",
+  "progressive_complexity": "not run; no upper layers exist",
+  "cross_layer_core_consistency": "not run; no upper layers exist",
+  "component_decomposition": "pending visual approval of master",
+  "single_layer_geometry_passed": true
+}
