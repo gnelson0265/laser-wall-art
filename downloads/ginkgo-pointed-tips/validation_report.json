@@ -1,0 +1,248 @@
+{
+  "passed": true,
+  "manufacturing": {
+    "width": 6400,
+    "height": 7200,
+    "dpi": 600,
+    "radius": 20,
+    "boundary": [
+      150,
+      150,
+      6249,
+      7049
+    ],
+    "boundary_width": 38
+  },
+  "scaling_boundary_external_height_pixels": 6900,
+  "scaling_boundary_external_height_inches": 11.5,
+  "minimum_required_width_pixels": 38,
+  "layer_order": "bottom (most detailed) to top (outline only)",
+  "removal_stages": [
+    [
+      "15",
+      "10",
+      "8",
+      "9",
+      "11",
+      "19",
+      "24",
+      "22",
+      "27",
+      "28",
+      "3",
+      "18",
+      "16"
+    ],
+    [
+      "17",
+      "5",
+      "23",
+      "4",
+      "13",
+      "7",
+      "29",
+      "26",
+      "12"
+    ],
+    [
+      "6",
+      "14",
+      "21",
+      "20",
+      "25",
+      "30"
+    ],
+    [
+      "2"
+    ]
+  ],
+  "layers": [
+    {
+      "file": "layer_01_bottom.png",
+      "artwork_pixels": 4928242,
+      "containment_violations": 0,
+      "missing_core_pixels": 0,
+      "symmetry_mismatched_pixels": 0,
+      "artwork_connected_components": 1,
+      "minimum_width_uncovered_pixels": 73396,
+      "connected_backbones_after_19px_erosion": 45,
+      "minimum_width_method": "Exact rolling-disk opening, radius 20 px; all structural strokes share this disk",
+      "guaranteed_stroke_diameter_pixels": null,
+      "removed_artwork_pixels": null,
+      "meaningful_removal": true,
+      "dimensions": [
+        6400,
+        7200
+      ],
+      "dpi": [
+        599.9988,
+        599.9988
+      ],
+      "binary_colors": true,
+      "registration_exact": true,
+      "registration_separate": true,
+      "top_is_core_only": null,
+      "passed": true,
+      "uniform_width_without_exceptions_passed": false,
+      "terminal_extension_pixels": 79352,
+      "structural_body_is_subset": true,
+      "structural_width_passed": true,
+      "structural_body_validation_passed": true,
+      "minimum_structural_stroke_diameter_pixels": 41,
+      "tip_width_exception": "Only rendered terminal extensions; roots, body, core and bridges remain strict",
+      "width_violations_outside_terminal_extensions": 0
+    },
+    {
+      "file": "layer_02.png",
+      "artwork_pixels": 4234782,
+      "containment_violations": 0,
+      "missing_core_pixels": 0,
+      "symmetry_mismatched_pixels": 0,
+      "artwork_connected_components": 1,
+      "minimum_width_uncovered_pixels": 43834,
+      "connected_backbones_after_19px_erosion": 27,
+      "minimum_width_method": "Exact rolling-disk opening, radius 20 px; all structural strokes share this disk",
+      "guaranteed_stroke_diameter_pixels": null,
+      "removed_artwork_pixels": 693460,
+      "meaningful_removal": true,
+      "dimensions": [
+        6400,
+        7200
+      ],
+      "dpi": [
+        599.9988,
+        599.9988
+      ],
+      "binary_colors": true,
+      "registration_exact": true,
+      "registration_separate": true,
+      "top_is_core_only": null,
+      "passed": true,
+      "uniform_width_without_exceptions_passed": false,
+      "terminal_extension_pixels": 48284,
+      "structural_body_is_subset": true,
+      "structural_width_passed": true,
+      "structural_body_validation_passed": true,
+      "minimum_structural_stroke_diameter_pixels": 41,
+      "tip_width_exception": "Only rendered terminal extensions; roots, body, core and bridges remain strict",
+      "width_violations_outside_terminal_extensions": 0
+    },
+    {
+      "file": "layer_03.png",
+      "artwork_pixels": 3674652,
+      "containment_violations": 0,
+      "missing_core_pixels": 0,
+      "symmetry_mismatched_pixels": 0,
+      "artwork_connected_components": 1,
+      "minimum_width_uncovered_pixels": 27036,
+      "connected_backbones_after_19px_erosion": 21,
+      "minimum_width_method": "Exact rolling-disk opening, radius 20 px; all structural strokes share this disk",
+      "guaranteed_stroke_diameter_pixels": null,
+      "removed_artwork_pixels": 560130,
+      "meaningful_removal": true,
+      "dimensions": [
+        6400,
+        7200
+      ],
+      "dpi": [
+        599.9988,
+        599.9988
+      ],
+      "binary_colors": true,
+      "registration_exact": true,
+      "registration_separate": true,
+      "top_is_core_only": null,
+      "passed": true,
+      "uniform_width_without_exceptions_passed": false,
+      "terminal_extension_pixels": 30216,
+      "structural_body_is_subset": true,
+      "structural_width_passed": true,
+      "structural_body_validation_passed": true,
+      "minimum_structural_stroke_diameter_pixels": 41,
+      "tip_width_exception": "Only rendered terminal extensions; roots, body, core and bridges remain strict",
+      "width_violations_outside_terminal_extensions": 0
+    },
+    {
+      "file": "layer_04.png",
+      "artwork_pixels": 3101518,
+      "containment_violations": 0,
+      "missing_core_pixels": 0,
+      "symmetry_mismatched_pixels": 0,
+      "artwork_connected_components": 1,
+      "minimum_width_uncovered_pixels": 0,
+      "connected_backbones_after_19px_erosion": 1,
+      "minimum_width_method": "Exact rolling-disk opening, radius 20 px; all structural strokes share this disk",
+      "guaranteed_stroke_diameter_pixels": 41,
+      "removed_artwork_pixels": 573134,
+      "meaningful_removal": true,
+      "dimensions": [
+        6400,
+        7200
+      ],
+      "dpi": [
+        599.9988,
+        599.9988
+      ],
+      "binary_colors": true,
+      "registration_exact": true,
+      "registration_separate": true,
+      "top_is_core_only": null,
+      "passed": true,
+      "uniform_width_without_exceptions_passed": true,
+      "terminal_extension_pixels": 0,
+      "structural_body_is_subset": true,
+      "structural_width_passed": true,
+      "structural_body_validation_passed": true,
+      "minimum_structural_stroke_diameter_pixels": 41,
+      "tip_width_exception": "Only rendered terminal extensions; roots, body, core and bridges remain strict",
+      "width_violations_outside_terminal_extensions": 0
+    },
+    {
+      "file": "layer_05_top.png",
+      "artwork_pixels": 1123994,
+      "containment_violations": 0,
+      "missing_core_pixels": 0,
+      "symmetry_mismatched_pixels": 0,
+      "artwork_connected_components": 1,
+      "minimum_width_uncovered_pixels": 0,
+      "connected_backbones_after_19px_erosion": 1,
+      "minimum_width_method": "Exact rolling-disk opening, radius 20 px; all structural strokes share this disk",
+      "guaranteed_stroke_diameter_pixels": 41,
+      "removed_artwork_pixels": 1977524,
+      "meaningful_removal": true,
+      "dimensions": [
+        6400,
+        7200
+      ],
+      "dpi": [
+        599.9988,
+        599.9988
+      ],
+      "binary_colors": true,
+      "registration_exact": true,
+      "registration_separate": true,
+      "top_is_core_only": true,
+      "passed": true,
+      "uniform_width_without_exceptions_passed": true,
+      "terminal_extension_pixels": 0,
+      "structural_body_is_subset": true,
+      "structural_width_passed": true,
+      "structural_body_validation_passed": true,
+      "minimum_structural_stroke_diameter_pixels": 41,
+      "tip_width_exception": "Only rendered terminal extensions; roots, body, core and bridges remain strict",
+      "width_violations_outside_terminal_extensions": 0
+    }
+  ],
+  "pointed_tip_exception_enabled": true,
+  "uniform_minimum_width_for_entire_design_passed": false,
+  "structural_bodies_validation_file": "structural_bodies_validation.json",
+  "policy": "Decorative free tips may taper to a point; all structural bodies and bridges must satisfy the original 38-pixel minimum",
+  "pointed_terminal_count": 34,
+  "outer_silhouette_unchanged": true,
+  "lateral_rim_audit_passed": true,
+  "unplanned_lateral_rim_pixels": 0,
+  "authored_roots_checked": 52,
+  "all_roots_start_inside_parent": true,
+  "minimum_root_clearance_pixels": 2.3970129496652084,
+  "geometry_method": "Parent-following root transitions and graph-wide continuous taper; immutable curve components"
+}

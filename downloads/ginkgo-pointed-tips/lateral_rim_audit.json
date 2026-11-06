@@ -1,0 +1,8 @@
+{
+  "scope": "Lateral fan rim; excludes deliberate attachment windows, central notch and stem",
+  "tested_inner_band_pixels": 8,
+  "attachment_window_radius_pixels": 180,
+  "fan_cutoff_y": 4620.956937799043,
+  "unplanned_lateral_rim_pixels": 0,
+  "passed": true
+}
