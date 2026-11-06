@@ -1,0 +1,9 @@
+{
+  "sha256": "b93b07fb5e538574da267b9a27498806eb1c25a60712962c6b04820980d6c488",
+  "runtime": "0.28.3",
+  "packages": [
+    "numpy",
+    "scipy",
+    "pillow"
+  ]
+}

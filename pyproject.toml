@@ -1,0 +1,19 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "layered-laser-art"
+version = "0.1.0"
+description = "Component-based, pixel-validated layered laser artwork"
+requires-python = ">=3.11"
+dependencies = ["numpy>=2.0,<3", "Pillow>=11,<14", "scipy>=1.14,<2"]
+
+[project.optional-dependencies]
+browser-test = ["playwright>=1.48,<2"]
+
+[project.scripts]
+laser-art = "laser_art.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["laser_art*"]

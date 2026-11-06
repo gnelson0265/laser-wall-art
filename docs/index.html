@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="Create beautifully aligned layered laser art. Review one master, build your layers, and download a validated cutting set. Your artwork stays in your browser.">
+<meta name="theme-color" content="#234735"><title>Layerleaf — Laser art studio</title>
+<link rel="icon" href="./assets/icon.svg" type="image/svg+xml"><link rel="stylesheet" href="./style.css">
+<script src="./app.js" type="module"></script>
+</head>
+<body>
+<header class="topbar">
+ <a href="./" class="brand" aria-label="Layerleaf home"><svg viewBox="0 0 36 36" aria-hidden="true"><path d="M9 25C8 12 18 6 29 7c0 13-7 22-20 18Zm0 0L24 12"/></svg><span>layerleaf<span class="brand-dot">.</span></span><span class="brand-caption">LASER ART STUDIO</span></a>
+ <nav aria-label="Main navigation"><span class="nav-active">Studio</span><button class="text-button" id="how-button">How it works <span aria-hidden="true">→</span></button></nav>
+ <span class="privacy-label"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="m10 2 6 3v5c0 4-6 7-6 7s-6-3-6-7V5l6-3Z"/><path d="m7 9 2 2 4-4"/></svg>Made here. Kept on your device.</span>
+</header>
+<div class="app-shell">
+<aside class="sidebar">
+ <div class="sidebar-top"><span class="eyebrow">YOUR WORKSPACE</span><button class="new-button" id="new-button"><span aria-hidden="true">＋</span> New layer set</button></div>
+ <div class="sidebar-section"><span class="eyebrow">A LITTLE INSPIRATION</span><button class="example-card" id="example-button"><img src="./assets/ginkgo-stack.png" alt="Five green layers of a filigree ginkgo leaf"><span><strong>The ginkgo study</strong><small>5 layers · View example <span aria-hidden="true">→</span></small></span></button></div>
+ <div class="sidebar-bottom"><div class="spec-label"><span class="little-leaf">✳</span> Thoughtfully made for cutting</div><dl><div><dt>Resolution</dt><dd>600 DPI</dd></div><div><dt>Scaling frame</dt><dd>11.5 in</dd></div><div><dt>Structural width</dt><dd>≥ 1/16 in</dd></div></dl><p>One master. Every layer aligned.<br>Every detail has its place.</p></div>
+</aside>
+<main id="main">
+ <div class="workspace-heading"><div><span class="breadcrumb">YOUR STUDIO <span>/</span> <span id="breadcrumb-current">NEW LAYER SET</span></span><h1>A little depth.<br><em>A lot of possibility.</em></h1></div><span class="status-pill" id="status-pill"><i></i>Ready when you are</span></div>
+ <div id="notice" class="notice" role="alert" hidden></div>
+ <section class="workbench" id="workbench">
+  <div class="control-panel">
+   <ol class="stepper" aria-label="Design steps"><li data-step="1" class="active"><span>1</span> Subject</li><li data-step="2"><span>2</span> Layers</li><li data-step="3"><span>3</span> Artwork</li></ol>
+   <form id="design-form" novalidate>
+    <section id="step-1" class="form-step">
+     <span class="eyebrow">01 / THE IDEA</span><h2>Start with a subject.</h2><p class="section-copy">Good layers begin with a clear idea.</p>
+     <label for="subject">What would you like the master image to represent?</label><input id="subject" name="subject" maxlength="200" placeholder="e.g. a ginkgo leaf" autocomplete="off" required>
+     <div class="suggestions"><button type="button" data-subject="Ginkgo leaf">→ Ginkgo leaf</button></div>
+     <p class="field-note">Ginkgo leaf is the first available subject. A reference image defines the artwork.</p>
+     <button class="primary-button" type="submit">Choose your layers <span aria-hidden="true">→</span></button>
+    </section>
+    <section id="step-2" class="form-step" hidden>
+     <span class="eyebrow">02 / THE DEPTH</span><h2>Give it dimension.</h2><p class="section-copy">Intricate below. Simple above. Beautiful together.</p>
+     <label for="layers">How many layers would you like to use to represent it?</label>
+     <div class="number-control"><button type="button" id="less-layers" aria-label="Fewer layers">−</button><input id="layers" type="number" min="2" max="12" value="5" step="1" inputmode="numeric" aria-describedby="layers-help"><button type="button" id="more-layers" aria-label="More layers">＋</button></div>
+     <div class="depth-bars" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></div>
+     <p class="field-note" id="layers-help">Choose 2–12 layers. The artwork must have enough distinct detail for every step.</p>
+     <button class="primary-button" type="submit">Choose your artwork <span aria-hidden="true">→</span></button><button type="button" class="back-button" data-back="1">← Back to subject</button>
+    </section>
+    <section id="step-3" class="form-step" hidden>
+     <span class="eyebrow">03 / THE MASTER</span><h2>Make it your own.</h2><p class="section-copy">Use our refined ginkgo, or bring your own black-and-white ginkgo master.</p>
+     <div class="reference-options"><label class="option-card"><input type="radio" name="reference" value="sample" checked><span><strong>Start with the ginkgo study</strong><small>Smooth scrolls, flowing veins, ready to explore.</small></span></label><label class="option-card"><input type="radio" name="reference" value="upload"><span><strong>Use my own reference</strong><small>A clear, connected, symmetrical ginkgo design.</small></span></label></div>
+     <div id="upload-area" hidden><label class="upload-zone" id="upload-zone" for="reference-file"><span aria-hidden="true">↥</span><strong id="upload-label">Drop an image, or choose a file</strong><small>PNG or JPEG · up to 20 MB</small><input id="reference-file" type="file" accept="image/png,image/jpeg"></label></div>
+     <fieldset class="tips-fieldset"><legend>Finish the tendrils</legend><div class="tip-options"><label><input type="radio" name="tips" value="pointed" checked><span>Fine points</span></label><label><input type="radio" name="tips" value="rounded"><span>Rounded ends</span></label></div><p class="field-note" id="tip-note">Fine decorative tips may taper below 1/16 in. Structural bridges keep their full minimum width.</p></fieldset>
+     <button class="primary-button" type="submit">Preview my master <span aria-hidden="true">→</span></button><button type="button" class="back-button" data-back="2">← Back to layers</button>
+    </section>
+   </form>
+   <section id="processing-panel" hidden aria-live="polite"><span class="eyebrow">IN THE MAKING</span><h2 id="processing-title">A little patience.<br>Something lovely.</h2><p class="section-copy" id="progress-label">Getting the drawing tools ready…</p><div class="progress-track"><div id="progress-bar"></div></div><p id="progress-detail" class="field-note">High-resolution artwork takes a few minutes. You can keep this tab open while it works.</p><button id="cancel-button" class="back-button">Stop and go back</button></section>
+   <section id="review-panel" hidden><span class="eyebrow">YOUR MASTER / FOR REVIEW</span><h2>A good beginning.</h2><p class="section-copy">Check the outline, curves and tendril tips. This exact master will be used for every layer.</p><dl class="design-summary" id="review-summary"></dl><p class="review-note">Happy with the flow? Build the layer set next. Cutting checks run on the exported files.</p><button id="approve-button" class="primary-button">Approve & build layers <span aria-hidden="true">→</span></button><button id="adjust-button" class="back-button">← Adjust artwork</button></section>
+   <section id="download-panel" hidden><span class="eyebrow" id="result-eyebrow">YOUR FINISHED SET</span><h2>Made to come<br>together.</h2><p class="section-copy" id="result-description"></p><div class="checks-summary" id="checks-summary"></div><a class="primary-button download-button" id="download-zip" download>Download complete set <span aria-hidden="true">↓</span></a><p class="field-note" id="download-detail"></p><a id="download-report" class="report-link" download>Download validation report →</a><button id="another-button" class="back-button">＋ Create another layer set</button></section>
+   <div class="local-note"><svg viewBox="0 0 20 20" aria-hidden="true"><rect x="3" y="8" width="14" height="10" rx="2"/><path d="M6 8V6a4 4 0 0 1 8 0v2"/></svg><span>Your artwork stays in your browser.<small>Desktop Chrome or Edge recommended.</small></span></div>
+  </div>
+  <div class="art-panel">
+   <div class="art-toolbar"><span class="eyebrow" id="art-label">THE GINKGO STUDY</span><button class="icon-button" id="zoom-button" aria-label="Enlarge artwork" title="Enlarge artwork">⤢</button></div>
+   <div id="art-stage" class="art-stage"><div class="art-caption" id="art-caption">DESIGN ONCE. REVEAL IN LAYERS.</div><img id="main-art" src="./assets/ginkgo-stack.png" alt="Example of five aligned green ginkgo layers"><div class="art-busy" id="art-busy" hidden><span class="spinner"></span><span>Crafting your design</span></div></div>
+   <div class="art-footer" id="art-footer"><div class="palette" aria-label="Five shades from bottom to top"><i style="--shade:#123d24"></i><i style="--shade:#216b3a"></i><i style="--shade:#399750"></i><i style="--shade:#6bbc70"></i><i style="--shade:#a7dca0"></i></div><span>Richer below. Lighter above.</span><small>5 layers · example</small></div>
+   <div id="results-tools" hidden><div class="result-tabs" role="tablist" aria-label="Design views"><button role="tab" aria-selected="true" data-tab="stack">Green stack</button><button role="tab" aria-selected="false" data-tab="layers">Individual layers</button><button role="tab" aria-selected="false" data-tab="checks">Cutting checks</button></div></div>
+   <div id="layers-view" class="layers-view" hidden></div><div id="checks-view" class="checks-view" hidden></div>
+  </div>
+ </section>
+ <footer class="workspace-footer"><span>Considered curves. Connected details. Perfectly nested layers.</span><span>600 DPI <b>·</b> 11.5 in scaling frame</span></footer>
+</main>
+</div>
+<dialog id="image-dialog"><button id="close-image" class="dialog-close" aria-label="Close enlarged artwork">×</button><img id="dialog-art" alt="Enlarged artwork"><a id="dialog-download" download class="report-link">Download full-resolution PNG ↓</a></dialog>
+<dialog id="how-dialog"><button id="close-how" class="dialog-close" aria-label="Close how it works">×</button><span class="eyebrow">FROM IDEA TO OBJECT</span><h2>One master.<br>Many layers.</h2><ol class="how-steps"><li><strong>Choose a subject and layer count.</strong><p>Start with the ginkgo study or your own ornamental ginkgo reference.</p></li><li><strong>Review your master.</strong><p>Inspect its shape and curves before generating the set.</p></li><li><strong>Build, check and download.</strong><p>Whole details are removed progressively. Exported pixels are checked for alignment, symmetry, connectivity and material width.</p></li></ol><p class="field-note">Generation runs locally in a browser worker. Runtime libraries load from jsDelivr; your reference image is never uploaded. Save your ZIP before closing the page.</p><button id="how-example-button" class="primary-button" type="button">Explore the finished ginkgo set <span aria-hidden="true">→</span></button></dialog>
+<noscript><p class="notice">JavaScript is required to run this studio. Enable it in a modern desktop browser.</p></noscript>
+</body></html>

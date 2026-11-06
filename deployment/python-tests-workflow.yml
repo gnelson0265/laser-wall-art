@@ -1,0 +1,23 @@
+name: Test generator
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - 'laser_art/**'
+      - 'tests/**'
+      - 'pyproject.toml'
+  pull_request:
+    paths:
+      - 'laser_art/**'
+      - 'tests/**'
+      - 'pyproject.toml'
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python -m pip install .
+      - run: python -m unittest discover -s tests -v
